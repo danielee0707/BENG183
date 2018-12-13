@@ -21,7 +21,7 @@ Now let's go through the steps in PCA calculation:
 <img src="https://github.com/danielee0707/BENG183/blob/master/4.png" width="50%" />
 <img src="https://github.com/danielee0707/BENG183/blob/master/6.png" width="50%" />
 
-4. Finally, we rotate the coordinate so that PC1 becomes x-axis and PC2 becomes y-axis. The top two PCs are able to explain 94% of all variations in the data.
+4. Finally, we rotate the coordinates so that PC1 becomes x-axis and PC2 becomes y-axis. The top two PCs are able to explain 94% of all variations in the data.
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/5.png" width="50%" />
 
@@ -29,23 +29,29 @@ Now let's go through the steps in PCA calculation:
 When performing PCA transformation, only the top several PCs are used, and other PCs (dimensions) are discarded. Information is *lost* in this process.
 
 ### t-SNE
-By projecting data points to a plane of high variability, PCA only preserves the global structure of data points (which means it may not be powerful enough to distinguish subgroups). So we will need t-SNE to see more detailed neighboring structures.
+By projecting data points to a plane of high variability, PCA tries to place dissimilar data points far apart and only preserves the global structure of data points (which means it may not be powerful enough to distinguish subgroups). So we will need t-SNE to see more detailed neighboring structures.
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/7.png" width="50%" />
 <img src="https://github.com/danielee0707/BENG183/blob/master/8.png" width="50%" />
 
 [Source](https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code)
 
-1. So how does tSNE work? The name stands for t-distributed stochastic neighbor embedding. The underlining mathematics of t-SNE is very advance and will not be covered here. But basiclly, it applies neighborhood preserving mapping so that distances between neighboring points are truthfully preserved after transformation.
+1. So how does t-SNE work? The name stands for t-distributed stochastic neighbor embedding. The underlining mathematics of t-SNE is very advance and will not be covered here. But basiclly, it applies neighborhood preserving mapping so that distances between neighboring points are truthfully preserved after transformation.
 
-2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by tSNE. This is usually determined arbitrarily. (Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
+2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by t-SNE. This is usually determined arbitrarily. (Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="100%" />
 
-3. Meanwhile, since there is always some randomality in tSNE’s embedding, we need to run multiple *iterations* to improve the 2D embedding to best represent the original structure. Such number of iterations is another hyperparameter to choose, and generally, the more iterations tSNE runs, the more credible the resulting embedding will be.
+3. Meanwhile, since there is always some randomality in t-SNE’s embedding, we need to run multiple *iterations* to improve the 2D embedding to best represent the original structure. Such number of iterations is another hyperparameter to choose, and generally, the more iterations t-SNE runs, the more credible the resulting embedding will be.
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/10.gif" width="50%" />
 
 **Note:**
 * The size of each cluster in a t-SNE plot means nothing because it tends to expand dense clusters and shrink sparse ones.
 * Since t-SNE only represents distances within a potential cluster, distances between clusters do not provide any information.
+
+## PCA vs t-SNE
+1. t-SNE is much more computationally expensive than PCA.
+2. PCA is deterministic while t-SNE is not. Hyperparameters for t-SNE are somewhat arbitrary.
+3. Information is lost during PCA calculation while t-SNE attempts to capture information from all dimensions.
+[Reference](https://www.datacamp.com/community/tutorials/introduction-t-sne)
