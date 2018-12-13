@@ -4,7 +4,9 @@ By Chen Li
 After we obtain an expression matrix RNA-seq, in which every row is a gene, and every column is a sample, how can we get a general sense of the distribution of the data and extract important features (genes) from the data matrix? Note that the expression matrix is usually in a high dimensional space because every gene is a dimension, so directly visualizing the data is impossible for human beings. Dimension reduction techniques such as PCA and t-SNE can map the original data in high dimension to lower dimension while retaining some spatial information (similarity and difference between samples). In this way, we can easily visualize the data in 2D space. In addition, PCA can return the *importances* of the features (genes), which are the ability of these features in grouping and separating the data points. By extracting the most important genes from the raw data matrix, we are able to explore the data such as clustering more easily. 
 
 ### PCA
-PCA (Principle Component Analysis) is widely used upstream of calculations that handle high dimensional data badly. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D or 3D. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration. (Youtube Reference: [StatQuest](https://www.youtube.com/watch?v=FgakZw6K1QQ))
+PCA (Principle Component Analysis) is widely used upstream of calculations that handle high dimensional data badly. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D or 3D. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration.
+
+(Youtube Reference: [StatQuest](https://www.youtube.com/watch?v=FgakZw6K1QQ))
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/1.png" width="50%" />
 
@@ -34,11 +36,12 @@ By projecting data points to a plane of high variability, PCA tries to place dis
 <img src="https://github.com/danielee0707/BENG183/blob/master/7.png" width="50%" />
 <img src="https://github.com/danielee0707/BENG183/blob/master/8.png" width="50%" />
 
-[Source](https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code)
+[Image Source](https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code)
 
 1. So how does t-SNE work? The name stands for t-distributed stochastic neighbor embedding. The underlining mathematics of t-SNE is very advance and will not be covered here. But basiclly, it applies neighborhood preserving mapping so that distances between neighboring points are truthfully preserved after transformation.
 
-2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by t-SNE. This is usually determined arbitrarily. (Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
+2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by t-SNE. This is usually determined arbitrarily.
+(Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="100%" />
 
@@ -54,4 +57,5 @@ By projecting data points to a plane of high variability, PCA tries to place dis
 1. t-SNE is much more computationally expensive than PCA.
 2. PCA is deterministic while t-SNE is not. Hyperparameters for t-SNE are somewhat arbitrary.
 3. Information is lost during PCA calculation while t-SNE attempts to capture information from all dimensions.
+
 [Reference](https://www.datacamp.com/community/tutorials/introduction-t-sne)
