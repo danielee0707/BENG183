@@ -26,8 +26,12 @@ When performing PCA transformation, only the top several PCs are used, and other
 
 ### t-SNE
 By projecting data points to a plane of high variability, PCA only preserves global structure of the data points (which means it may lose information such as subgroups). So we will need t-SNE to see more detailed neighboring structure.
+<img src="https://github.com/danielee0707/BENG183/blob/master/7.png" width="50%" />
+<img src="https://github.com/danielee0707/BENG183/blob/master/8.png" width="50%" />
+[Source:](https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code))
 
-1. How does tSNE work? The underlining mathematics of t-SNE is very advance so will not be covered here. Basiclly, it applies neighborhood preserving embedding so that distances between neighboring points are truthfully preserved. Thus, for original points x1, x2, x3 and their embeddings x1’, x2’ and x3’ in tSNE plot here, d(x1’, x2’) represents d(x1, x2) because they are neighbors, but d(x1’, x3’) is not necessarily representative of the original distance between x1 and x3 since they are not in the same neighborhood.
+
+1. How does tSNE work? The underlining mathematics of t-SNE is very advance so will not be covered here. Basiclly, it applies neighborhood preserving embedding so that distances between neighboring points are truthfully preserved. 
 
 2 But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by tSNE. This is usually determined arbitrarily.
 
