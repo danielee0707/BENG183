@@ -40,7 +40,7 @@ By projecting data points to a plane of high variability, PCA only preserves the
 
 2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by tSNE. This is usually determined arbitrarily. (Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
 
-<img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="80%" />
+<img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="100%" />
 
 3. Meanwhile, since there is always some randomality in tSNE’s embedding, we need to run multiple *iterations* to improve the 2D embedding to best represent the original structure. Such number of iterations is another hyperparameter to choose, and generally, the more iterations tSNE runs, the more credible the resulting embedding will be.
 
