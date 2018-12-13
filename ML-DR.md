@@ -34,5 +34,5 @@ By projecting data points to a plane of high variability, PCA only preserves glo
 3. Meanwhile, since there is always some randomality in tSNE’s embedding, we need to run multiple *iterations* to improve the 2D embedding to best represents the original structure. Such number of iterations is another hyperparameter to choose and generally the more iterations tSNE runs, the better the representation of the resulting embedding.
 
 **Note:**
-..* Cluster sizes in a t-SNE plot means nothing because it tends to expand dense clusters and shrink sparse ones.
-..* Since t-SNE only represents distances within potential cluster, distances between clusters do not provide any information.
+* Cluster sizes in a t-SNE plot means nothing because it tends to expand dense clusters and shrink sparse ones.
+* Since t-SNE only represents distances within potential cluster, distances between clusters do not provide any information.
