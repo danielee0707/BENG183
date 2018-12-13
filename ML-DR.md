@@ -16,11 +16,14 @@ Now let's go through the steps in PCA calculation:
  
 2. This line is called PC1, or **Principal Component** 1, and it captures the largest variation in the data. From the resulting line, we also know what its compositions based on the slope: it contains 4 parts Gene1 plus 1 part Gene2.
     
-3. PC2 is simply the line perpendicular to PC1. If the data is in 3D, PC2 will be residing in a plane perpendicular to PC1, and the previous steps will be repeated. All dotted lines are perpendicular to each other. The top two PCs are able to explain 94% of all variations in the data. Finally, we rotate the coordinate so that PC1 becomes x-axis and PC2 becomes y-axis.
+3. PC2 is simply the line perpendicular to PC1. If the data is in 3D, PC2 will be residing in a plane perpendicular to PC1, and the previous steps will be repeated. All dotted lines are perpendicular to each other.
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/4.png" width="50%" />
-<img src="https://github.com/danielee0707/BENG183/blob/master/5.png" width="50%" />
 <img src="https://github.com/danielee0707/BENG183/blob/master/6.png" width="50%" />
+
+4. Finally, we rotate the coordinate so that PC1 becomes x-axis and PC2 becomes y-axis. The top two PCs are able to explain 94% of all variations in the data.
+
+<img src="https://github.com/danielee0707/BENG183/blob/master/5.png" width="50%" />
 
 **Note:** 
 When performing PCA transformation, only the top several PCs are used, and other PCs (dimensions) are discarded. Information is *lost* in this process.
