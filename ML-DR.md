@@ -7,19 +7,18 @@ After we obtain an expression matrix RNA-seq, in which every row is a gene, and 
 PCA is widely used in high dimension calculations such as image processing. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D or 3D. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration. (Youtube Reference: [StatQuest](https://www.youtube.com/watch?v=FgakZw6K1QQ))
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/1.png" width="50%" />
-![](https://github.com/danielee0707/BENG183/blob/master/1.png)
     
 1.  The data set is first moved so that its center is at origin. Then PCA calculates the top components with the highest variations in the data. What it does is to fit a line to the data set. For an arbitrary line in the plane through the origin, the (sum of squared) distances to the projections of all the points are calculated and maximized. This has the same effect as minimizing all the distances between the points and the line. (In real world, calculation is done by linear algebra.)
 
-![](https://github.com/danielee0707/BENG183/blob/master/2.png)
-![](https://github.com/danielee0707/BENG183/blob/master/3.png)
+<img src="https://github.com/danielee0707/BENG183/blob/master/2.png" width="50%" />
+<img src="https://github.com/danielee0707/BENG183/blob/master/3.png" width="50%" />
  
 3.  This line is called PC1, or **Principal Component** 1, and it captures the largest variation in the data. From the resulting line, we also know what its compositions based on the slope: it contains 4 parts Gene1 plus 1 part Gene2.
     
 4.  PC2 is simply the line perpendicular to PC1. If the data is in 3D, PC2 will be residing in a plane perpendicular to PC1, and the previous steps will be repeated. All dotted lines are perpendicular to each other. The top two PCs are able to explain 94% of all variations in the data. Finally, we rotate the coordinate so that PC1 becomes x-axis and PC2 becomes y-axis.
 
-![](https://github.com/danielee0707/BENG183/blob/master/4.png)
-![](https://github.com/danielee0707/BENG183/blob/master/5.png)
-![](https://github.com/danielee0707/BENG183/blob/master/6.png)
+<img src="https://github.com/danielee0707/BENG183/blob/master/4.png" width="50%" />
+<img src="https://github.com/danielee0707/BENG183/blob/master/5.png" width="50%" />
+<img src="https://github.com/danielee0707/BENG183/blob/master/6.png" width="50%" />
 
 5.  When performing PCA transformation, only the top several PCs are used, and other PCs (dimensions) are discarded. Information is **lost** in this process.
