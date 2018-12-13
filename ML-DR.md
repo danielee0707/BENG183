@@ -28,14 +28,17 @@ When performing PCA transformation, only the top several PCs are used, and other
 By projecting data points to a plane of high variability, PCA only preserves global structure of the data points (which means it may lose information such as subgroups). So we will need t-SNE to see more detailed neighboring structure.
 <img src="https://github.com/danielee0707/BENG183/blob/master/7.png" width="50%" />
 <img src="https://github.com/danielee0707/BENG183/blob/master/8.png" width="50%" />
-[Source:](https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code))
+[Source:](https://www.kaggle.com/puyokw/clustering-in-2-dimension-using-tsne/code)
 
+1. How does tSNE work? The underlining mathematics of t-SNE is very advance so will not be covered here. Basiclly, it applies neighborhood preserving embedding so that distances between neighboring points are truthfully preserved.
 
-1. How does tSNE work? The underlining mathematics of t-SNE is very advance so will not be covered here. Basiclly, it applies neighborhood preserving embedding so that distances between neighboring points are truthfully preserved. 
+2 But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by tSNE. This is usually determined arbitrarily. (Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
 
-2 But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by tSNE. This is usually determined arbitrarily.
+<img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="50%" />
 
 3. Meanwhile, since there is always some randomality in tSNE’s embedding, we need to run multiple *iterations* to improve the 2D embedding to best represents the original structure. Such number of iterations is another hyperparameter to choose and generally the more iterations tSNE runs, the better the representation of the resulting embedding.
+
+<img src="https://github.com/danielee0707/BENG183/blob/master/10.gif" width="50%" />
 
 **Note:**
 * Cluster sizes in a t-SNE plot means nothing because it tends to expand dense clusters and shrink sparse ones.
