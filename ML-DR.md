@@ -50,7 +50,7 @@ By projecting data points to a plane of high variability, PCA tries to place dis
 * The size of each cluster in a t-SNE plot means nothing because it tends to expand dense clusters and shrink sparse ones.
 * Since t-SNE only represents distances within a potential cluster, distances between clusters do not provide any information.
 
-## PCA vs t-SNE
+### PCA vs t-SNE
 1. t-SNE is much more computationally expensive than PCA.
 2. PCA is deterministic while t-SNE is not. Hyperparameters for t-SNE are somewhat arbitrary.
 3. Information is lost during PCA calculation while t-SNE attempts to capture information from all dimensions.
