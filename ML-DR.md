@@ -41,6 +41,7 @@ By projecting data points to a plane of high variability, PCA tries to place dis
 1. So how does t-SNE work? The name stands for t-distributed stochastic neighbor embedding. The underlining mathematics of t-SNE is very advance and will not be covered here. But basiclly, it applies neighborhood preserving mapping so that distances between neighboring points are truthfully preserved after transformation.
 
 2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by t-SNE. This is usually determined arbitrarily.
+
 (Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="100%" />
