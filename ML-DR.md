@@ -29,7 +29,7 @@ Now let's go through the steps in PCA calculation:
 When performing PCA transformation, only the top several PCs are used, and other PCs (dimensions) are discarded. Information is *lost* in this process.
 
 ### t-SNE
-By projecting data points to a plane of high variability, PCA only preserves global structure of the data points (which means it may lose information such as subgroups). So we will need t-SNE to see more detailed neighboring structure.
+By projecting data points to a plane of high variability, PCA only preserves the global structure of data points (which means it may not be powerful enough to distinguish subgroups). So we will need t-SNE to see more detailed neighboring structures.
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/7.png" width="50%" />
 <img src="https://github.com/danielee0707/BENG183/blob/master/8.png" width="50%" />
@@ -42,10 +42,10 @@ By projecting data points to a plane of high variability, PCA only preserves glo
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="80%" />
 
-3. Meanwhile, since there is always some randomality in tSNE’s embedding, we need to run multiple *iterations* to improve the 2D embedding to best represents the original structure. Such number of iterations is another hyperparameter to choose and generally the more iterations tSNE runs, the better the representation of the resulting embedding.
+3. Meanwhile, since there is always some randomality in tSNE’s embedding, we need to run multiple *iterations* to improve the 2D embedding to best represent the original structure. Such number of iterations is another hyperparameter to choose, and generally, the more iterations tSNE runs, the more credible the resulting embedding will be.
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/10.gif" width="50%" />
 
 **Note:**
 * The size of each cluster in a t-SNE plot means nothing because it tends to expand dense clusters and shrink sparse ones.
-* Since t-SNE only represents distances within potential cluster, distances between clusters do not provide any information.
+* Since t-SNE only represents distances within a potential cluster, distances between clusters do not provide any information.
