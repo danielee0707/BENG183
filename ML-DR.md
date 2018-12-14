@@ -59,9 +59,7 @@ By projecting data points to a plane of high variability, PCA tries to place dis
 * Since t-SNE only represents distances within a potential cluster, distances between clusters do not provide any information.
 
 ### PCA vs t-SNE
-Like many other machine learning techniques, PCA and t-SNE have their own advantages and disadvantages. When to use them depends on what you want to achieve. Please note that they are only two of the vast number of dimension reduction methods, and there are also ones that serve very similar purposes such as *ICA* and *UMAP*.
+Like many other machine learning techniques, PCA and t-SNE have their own advantages and disadvantages. When to use them depends on what you want to achieve. Please note that they are only two of the vast number of dimension reduction methods, and there are also ones that serve very similar purposes such as *ICA* and *UMAP*. [Reference](https://www.datacamp.com/community/tutorials/introduction-t-sne)
 1. t-SNE is much more computationally expensive than PCA.
 2. PCA is deterministic while t-SNE is not. Hyperparameters for t-SNE are somewhat arbitrary.
 3. Information is lost during PCA calculation while t-SNE attempts to capture information from all dimensions.
-
-[Reference](https://www.datacamp.com/community/tutorials/introduction-t-sne)
