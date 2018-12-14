@@ -27,7 +27,7 @@ Now let's go through the steps in PCA calculation:
 <img src="https://github.com/danielee0707/BENG183/blob/master/4.png" width="50%" />
 <img src="https://github.com/danielee0707/BENG183/blob/master/6.png" width="50%" />
 
-4. Finally, we rotate the coordinates so that PC1 becomes x-axis and PC2 becomes y-axis. The top two PCs are able to explain 94% of all variations in the data.
+4. In the final step, we rotate the coordinates so that PC1 becomes x-axis and PC2 becomes y-axis. The top two PCs are able to explain 94% of all variations in the data.
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/5.png" width="50%" />
 
