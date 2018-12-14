@@ -8,9 +8,7 @@ After we obtain an expression matrix RNA-seq, in which every row is a gene, and 
 3. [PCA vs t-SNE](#pca-vs-t-sne)
 
 ### PCA
-PCA (Principle Component Analysis) is widely used upstream of calculations that handle high dimensional data badly. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D or 3D. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration.
-
-(Youtube Reference: [StatQuest](https://www.youtube.com/watch?v=FgakZw6K1QQ))
+PCA (Principle Component Analysis) is widely used upstream of calculations that handle high dimensional data badly. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D or 3D. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration. Youtube Reference: [StatQuest](https://www.youtube.com/watch?v=FgakZw6K1QQ)
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/1.png" width="50%" />
 
@@ -44,9 +42,7 @@ By projecting data points to a plane of high variability, PCA tries to place dis
 
 1. So how does t-SNE work? The name stands for t-distributed stochastic neighbor embedding. The underlining mathematics of t-SNE is very advance and will not be covered here. But basiclly, it applies neighborhood preserving mapping so that distances between neighboring points are truthfully preserved after transformation.
 
-2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by t-SNE. This is usually determined arbitrarily.
-
-(Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1))
+2. But how do we determine neighbors? *Perplexity* represents roughly the number of potential neighbors considered for a cluster, so we can determine neighbors of each point and thus clusters by trying different perplexity parameters until a reasonable and clear clustering is visualized by t-SNE. This is usually determined arbitrarily. Youtube Reference: [Applied AI Course](https://www.youtube.com/watch?v=FQmCzpKWD48&list=PLupD_xFct8mHqCkuaXmeXhe0ajNDu0mhZ&index=1)
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/9.png" width="100%" />
 
