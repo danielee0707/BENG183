@@ -3,6 +3,10 @@ By Chen Li
 ## Introduction
 After we obtain an expression matrix RNA-seq, in which every row is a gene, and every column is a sample, how can we get a general sense of the distribution of the data and extract important features (genes) from the data matrix? Note that the expression matrix is usually in a high dimensional space because every gene is a dimension, so directly visualizing the data is impossible for human beings. Dimension reduction techniques such as PCA and t-SNE can map the original data in high dimension to lower dimension while retaining some spatial information (similarity and difference between samples). In this way, we can easily visualize the data in 2D space. In addition, PCA can return the *importances* of the features (genes), which are the ability of these features in grouping and separating the data points. By extracting the most important genes from the raw data matrix, we are able to explore the data such as clustering more easily. 
 
+1. [PCA](#pca)
+2. [t-SNE](#t-sne)
+3. [PCA vs t-SNE](#pca-vs-t-sne)
+
 ### PCA
 PCA (Principle Component Analysis) is widely used upstream of calculations that handle high dimensional data badly. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D or 3D. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration.
 
