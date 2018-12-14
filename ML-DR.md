@@ -11,6 +11,7 @@ After we obtain an expression matrix RNA-seq, in which every row is a gene, and 
 PCA (Principle Component Analysis) is widely used upstream of calculations that handle high dimensional data badly. PCA is a linear transformation method. It preserves the correlation between point x and y after transformation. PCA can reduce 4 or higher dimension graph to 2D or 3D. Let’s take a expression matrix for 6 mouse samples as an example. We will only use two genes for illustration. Youtube Reference: [StatQuest](https://www.youtube.com/watch?v=FgakZw6K1QQ)
 
 <img src="https://github.com/danielee0707/BENG183/blob/master/1.png" width="50%" />
+
 ![aaa](https://github.com/danielee0707/BENG183/tree/master/1.png "aaa")
 
 Now let's go through the steps in PCA calculation:
